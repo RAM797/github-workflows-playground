@@ -1,0 +1,9 @@
+rules:
+  - labels: [bug]
+    anyOf:
+      - '"created #\d+"'
+      - '"fix(es)? #\d+"'
+      - '"closes? #\d+"'
+  - labels: [enhancement]
+    anyOf:
+      - '"implement(s|ed)? #\d+"'
