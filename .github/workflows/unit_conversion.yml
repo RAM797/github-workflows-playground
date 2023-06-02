@@ -37,19 +37,22 @@ jobs:
           flake8 ./webapp
 
       - name: Run tests
-        if : always()
+        if: always()
         run: |
           python -m pytest
 
       - name: Build Docker image
+        if: always()
         run: |
           docker build -t $DOCKER_IMAGE_NAME .
 
       - name: Login to Docker Hub
+        if: always()
         run: |
           echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
 
       - name: Push Docker image
+        if: always()
         run: |
           docker push $DOCKER_IMAGE_NAME
 
