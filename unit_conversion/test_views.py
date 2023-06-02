@@ -5,10 +5,12 @@ from webapp.views import convert_temperature, convert_weight, convert_length
 # from django.conf import settings
 # import unit_conversion.settings
 import os
+import django
 import json
 # settings.configure(**vars(unit_conversion.settings))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','unit_conversion.settings')
+django.setup()
 
 @pytest.fixture
 def request_factory():
