@@ -37,6 +37,7 @@ jobs:
           flake8 ./webapp
 
       - name: Run tests
+        if : always()
         run: |
           python -m pytest
 
