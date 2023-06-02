@@ -49,7 +49,7 @@ jobs:
     needs: build_and_test
     defaults:
         run:
-          working-directory: unit_conversion/
+          working-directory: /home/runner/work/github-workflows-playground/unit_conversion/
     steps:
       - name: Build Docker image
         if: always()
