@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: github-workflows-playground/unit_conversion/
+        working-directory: unit_conversion/
 
     steps:
       - name: Checkout code
