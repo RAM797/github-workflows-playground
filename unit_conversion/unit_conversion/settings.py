@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import django
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,8 +25,6 @@ SECRET_KEY = 'django-insecure-c!z!uz5te889mmz3^ldxvktrgx0_6wb_(d-lu7d@1c(4=n84*9
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-django.setup()
 
 # Application definition
 

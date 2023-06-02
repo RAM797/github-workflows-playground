@@ -39,6 +39,7 @@ jobs:
       - name: Run tests
         if: always()
         run: |
+          python manage.py migrate
           pytest
     
 
