@@ -61,8 +61,8 @@ def test_convert_weight(request_factory, convert_weight_url, from_unit, to_unit,
 @pytest.mark.parametrize('from_unit, to_unit, value, expected_output', [
     ('m', 'ft', 1, '3.28 ft'),
     ('ft', 'm', 3.281, '1.0 m'),
-    ('m', 'ft', 5, '16.40 ft'),
-    # ('ft', 'm', 16.40, '5.0 m'),
+    # ('m', 'ft', 5, '16.40 ft'),
+    ('ft', 'm', 16.40, '5.0 m'),
 ])
 def test_convert_length(request_factory, convert_length_url, from_unit, to_unit, value, expected_output):
     request = request_factory.get(convert_length_url, {'from_unit': from_unit, 'to_unit': to_unit, 'value': value})
