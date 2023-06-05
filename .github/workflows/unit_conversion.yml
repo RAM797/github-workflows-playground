@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test_results
-          path: ${{ github.workspace }}/test_results.log
+          path: ${{ github.workspace }}/unit_conversion/test_results.log
 
   deploy:
     name: dockerzied deploy
