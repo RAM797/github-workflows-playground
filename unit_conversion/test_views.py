@@ -8,6 +8,7 @@ import os
 import django
 import json
 # settings.configure(**vars(unit_conversion.settings))
+# adding comments
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','unit_conversion.settings')
 django.setup()
