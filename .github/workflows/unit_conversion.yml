@@ -40,8 +40,13 @@ jobs:
         if: always()
         run: |
           python manage.py migrate
-          pytest
-    
+          pytest --cov > test_results.log
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test_results
+          path: test_results.log
 
   deploy:
     name: dockerzied deploy
