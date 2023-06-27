@@ -1,4 +1,4 @@
-name: callable work1flow
+name: callable workflow
 
 on:
   workflow_call:
