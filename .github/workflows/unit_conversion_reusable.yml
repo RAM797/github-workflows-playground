@@ -38,8 +38,8 @@ jobs:
     needs: build_and_test
     uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
     with:
-      path: ${{ github.workspace }}/unit_conversion/webapp
-      out: ${{ github.workspace }}/unit_conversion/${{github.run_id}}_lint_results.log
+      path: "${{ github.workspace }}/unit_conversion/webapp"
+      out: "${{ github.workspace }}/unit_conversion/${{github.run_id}}_lint_results.log"
 
     #   - name: Run tests
     #     if: always()
