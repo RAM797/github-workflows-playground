@@ -12,7 +12,7 @@ on:
 
 jobs:
   build_and_test:
-    name: Build_and_Test
+    name: build_and_test
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -35,11 +35,18 @@ jobs:
           echo "${{ github.workspace }}"
 
   linting_workflow:
+    name: Python lint
     needs: build_and_test
-    uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
-    with:
-      path: "${{ github.workspace }}/unit_conversion/webapp"
-      out: "${{ github.workspace }}/unit_conversion/${{github.run_id}}_lint_results.log"
+    runs-on: ubuntu-latest
+    steps:
+      - name: godir
+        run: |
+          cd /home/runner/work/github-workflows-playground/github-workflows-playground
+
+    # uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
+    # with:
+    #   path: "${{ github.workspace }}/unit_conversion/webapp"
+    #   out: "${{ github.workspace }}/unit_conversion/${{github.run_id}}_lint_results.log"
 
     #   - name: Run tests
     #     if: always()
