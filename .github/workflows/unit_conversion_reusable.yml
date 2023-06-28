@@ -34,7 +34,7 @@ jobs:
           pip install -r requirements.txt      
 
       - name: linting workflow
-        uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml
+        uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
         with:
           path: ${{ github.workspace }}/unit_conversion/webapp
           out: ${{ github.workspace }}/unit_conversion/${{github.run_id}}_lint_results.log
