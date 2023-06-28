@@ -47,7 +47,7 @@ jobs:
     uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
     with:
       path: /home/runner/work/github-workflows-playground/github-workflows-playground/unit_conversion/webapp
-      out:  /home/runner/work/github-workflows-playground/github-workflows-playground/${{github.run_id}}_lint_results.log"
+      out:  /home/runner/work/github-workflows-playground/github-workflows-playground/${{github.run_id}}_lint_results.log
 
     #   - name: Run tests
     #     if: always()
