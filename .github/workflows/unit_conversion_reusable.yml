@@ -42,6 +42,7 @@ jobs:
       - name: godir
         run: |
           cd /home/runner/work/github-workflows-playground/github-workflows-playground
+          ls
 
     # uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
     # with:
