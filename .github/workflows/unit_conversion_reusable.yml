@@ -37,17 +37,17 @@ jobs:
   linting_workflow:
     name: Python lint
     needs: build_and_test
-    runs-on: ubuntu-latest
-    steps:
-      - name: godir
-        run: |
-          cd /home/runner/work/github-workflows-playground/github-workflows-playground
-          ls
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - name: godir
+    #     run: |
+    #       cd /home/runner/work/github-workflows-playground/github-workflows-playground
+    #       ls
 
-    # uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
-    # with:
-    #   path: "${{ github.workspace }}/unit_conversion/webapp"
-    #   out: "${{ github.workspace }}/unit_conversion/${{github.run_id}}_lint_results.log"
+    uses: RAM797/github-reusable-workflows/.github/workflows/pylint.yml@main
+    with:
+      path: /home/runner/work/github-workflows-playground/github-workflows-playground/unit_conversion/webapp
+      out:  /home/runner/work/github-workflows-playground/github-workflows-playground/${{github.run_id}}_lint_results.log"
 
     #   - name: Run tests
     #     if: always()
