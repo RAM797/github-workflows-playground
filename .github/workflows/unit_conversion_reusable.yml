@@ -1,4 +1,4 @@
-name: Django App Workflow
+name: Django App resuable Workflow
 
 on:
   workflow_dispatch:
