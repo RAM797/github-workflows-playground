@@ -1,10 +1,7 @@
 name: Django App Workflow
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
 
 jobs:
   linting_workflow:
